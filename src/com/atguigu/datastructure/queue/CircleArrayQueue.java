@@ -2,7 +2,7 @@ package com.atguigu.datastructure.queue;
 
 import java.util.Scanner;
 
-public class CircleArrayQueueDemo {
+class CircleArrayQueueDemo {
 
 	public static void main(String[] args) {
 		
@@ -10,7 +10,7 @@ public class CircleArrayQueueDemo {
 		System.out.println("测试数组模拟环形队列的案例~~~");
 		
 		// 创建一个环形队列
-		CircleArray queue = new CircleArray(4); //说明设置4, 其队列的有效数据最大是3
+		CircleArrayQueue queue = new CircleArrayQueue(4); //说明设置4, 其队列的有效数据最大是3
 		char key = ' '; // 接收用户输入
 		Scanner scanner = new Scanner(System.in);//
 		boolean loop = true;
@@ -63,7 +63,7 @@ public class CircleArrayQueueDemo {
 }
 
 
-class CircleArray {
+public class CircleArrayQueue {
 	private int maxSize; // 表示数组的最大容量
 	//front 变量的含义做一个调整： front 就指向队列的第一个元素, 也就是说 arr[front] 就是队列的第一个元素 
 	//front 的初始值 = 0
@@ -73,7 +73,7 @@ class CircleArray {
 	private int rear; // 队列尾
 	private int[] arr; // 该数据用于存放数据, 模拟队列
 	
-	public CircleArray(int arrMaxSize) {
+	public CircleArrayQueue(int arrMaxSize) {
 		maxSize = arrMaxSize;
 		arr = new int[maxSize];
 	}
