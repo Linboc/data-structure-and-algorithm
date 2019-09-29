@@ -1,4 +1,4 @@
-package data_structure;
+package com.boc.datastructure;
 
 /**
  * 数组队列
